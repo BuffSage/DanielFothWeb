@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechtliches - DanielFoth.DE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/web-app-manifest-512x512.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><h2><span style="color:#fff;">Daniel</span><span style="color:#00d4ff;"> Foth</span></h2></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#tanoffice" class="nav-link">TanOffice</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary nav-contact-btn">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Rechtliches Section -->
+    <section style="background: #111; padding: 100px 0; min-height: 600px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h1 style="color: #00d4ff; font-size: 3rem; margin-bottom: 20px;">Rechtliches</h1>
+                <p style="color: #b0b0b0; font-size: 1.2rem;">Impressum, Datenschutz und Geschäftsbedingungen</p>
+            </div>
+            
+            <!-- STYLISH TAB STRUCTURE -->
+            <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); border-radius: 12px; overflow: hidden; margin: 40px 0; box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 212, 255, 0.1);">
+                <!-- Tab Navigation -->
+                <div style="display: flex; background: linear-gradient(135deg, #111 0%, #222 100%); border-bottom: 1px solid rgba(0, 212, 255, 0.2);">
+                    <button onclick="switchTab('impressum')" id="btn-impressum" style="flex: 1; padding: 20px; background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); color: white; border: none; font-size: 16px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Impressum</button>
+                    <button onclick="switchTab('datenschutz')" id="btn-datenschutz" style="flex: 1; padding: 20px; background: rgba(255,255,255,0.05); color: #b0b0b0; border: none; font-size: 16px; cursor: pointer; font-weight: 500; transition: all 0.3s ease; position: relative;" onmouseover="this.style.background='rgba(0, 212, 255, 0.1)'; this.style.color='#00d4ff'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='#b0b0b0'">Datenschutz</button>
+                    <button onclick="switchTab('agb')" id="btn-agb" style="flex: 1; padding: 20px; background: rgba(255,255,255,0.05); color: #b0b0b0; border: none; font-size: 16px; cursor: pointer; font-weight: 500; transition: all 0.3s ease; position: relative;" onmouseover="this.style.background='rgba(0, 212, 255, 0.1)'; this.style.color='#00d4ff'" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='#b0b0b0'">AGB</button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div style="padding: 50px; background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%); min-height: 400px;">
+                    <div id="content-impressum" style="display: block; color: white; animation: fadeIn 0.5s ease-out;">
+                        <h3 style="color: #00d4ff; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);">Impressum</h3>
+                        <div style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem;">
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">Angaben gemäß § 5 TMG</h4>
+                            <p style="margin-bottom: 25px;"><strong style="color: #00d4ff;">Daniel Foth</strong><br>
+                            Sponheimer Str. 8<br>
+                            56841 Traben-Trarbach<br>
+                            Deutschland</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">Kontakt</h4>
+                            <p style="margin-bottom: 25px;">Telefon: <span style="color: #00d4ff;">(0 65 41) 177 60 45</span><br>
+                            E-Mail: <a href="mailto:mail@danielfoth.de" style="color: #00d4ff; text-decoration: none;">mail@danielfoth.de</a></p>
+                        </div>
+                    </div>
+                    
+                    <div id="content-datenschutz" style="display: none; color: white; animation: fadeIn 0.5s ease-out;">
+                        <h3 style="color: #00d4ff; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);">Datenschutzerklärung</h3>
+                        <div style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem;">
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">1. Datenschutz auf einen Blick</h4>
+                            <p style="margin-bottom: 25px;"><strong>Allgemeine Hinweise:</strong> Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">2. Datenerfassung auf dieser Website</h4>
+                            <p style="margin-bottom: 25px;"><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+                            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.</p>
+                            
+                            <p style="margin-bottom: 25px;"><strong>Wie erfassen wir Ihre Daten?</strong><br>
+                            Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+                            
+                            <p style="margin-bottom: 25px;"><strong>Wofür nutzen wir Ihre Daten?</strong><br>
+                            Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">3. Ihre Rechte</h4>
+                            <p style="margin-bottom: 25px;">Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">4. Datenerfassung auf dieser Website</h4>
+                            <p style="margin-bottom: 25px;"><strong>Server-Log-Dateien:</strong><br>
+                            Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+                            <ul style="margin-bottom: 25px; padding-left: 25px;">
+                                <li>Browsertyp und Browserversion</li>
+                                <li>Verwendetes Betriebssystem</li>
+                                <li>Referrer URL</li>
+                                <li>Hostname des zugreifenden Rechners</li>
+                                <li>Uhrzeit der Serveranfrage</li>
+                                <li>IP-Adresse</li>
+                            </ul>
+                            <p style="margin-bottom: 25px;">Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">5. Kontaktformular</h4>
+                            <p style="margin-bottom: 25px;">Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">6. SSL- bzw. TLS-Verschlüsselung</h4>
+                            <p style="margin-bottom: 25px;">Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">7. Cookies</h4>
+                            <p style="margin-bottom: 25px;">Unsere Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">8. Speicherdauer</h4>
+                            <p style="margin-bottom: 25px;">Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="content-agb" style="display: none; color: white; animation: fadeIn 0.5s ease-out;">
+                        <h3 style="color: #00d4ff; font-size: 2.5rem; margin-bottom: 30px; font-weight: 700; text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);">Allgemeine Geschäftsbedingungen</h3>
+                        <div style="color: #e0e0e0; line-height: 1.8; font-size: 1.1rem;">
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 1 Geltungsbereich</h4>
+                            <p style="margin-bottom: 25px;">Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen Daniel Foth und seinen Kunden über die Erbringung von IT-Dienstleistungen, Software-Entwicklung und technischen Support-Leistungen. Abweichende Bedingungen des Kunden erkennen wir nicht an, es sei denn, wir haben ausdrücklich schriftlich ihrer Geltung zugestimmt.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 2 Vertragsschluss</h4>
+                            <p style="margin-bottom: 25px;">Der Vertrag kommt durch die schriftliche Auftragsbestätigung oder durch Beginn der Leistungserbringung zustande. Angebote sind freibleibend und unverbindlich, sofern nicht ausdrücklich etwas anderes vereinbart wurde. Aufträge können nur von geschäftsfähigen Personen oder ordnungsgemäß vertretenen juristischen Personen erteilt werden.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 3 Leistungsumfang</h4>
+                            <p style="margin-bottom: 25px;">Der Umfang der zu erbringenden Leistungen ergibt sich aus der jeweiligen Leistungsbeschreibung oder dem individuellen Angebot. Änderungen oder Ergänzungen des Leistungsumfangs bedürfen der schriftlichen Vereinbarung. Wir behalten uns das Recht vor, Teilleistungen zu erbringen, sofern dies für den Kunden zumutbar ist.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 4 Vergütung und Zahlungsbedingungen</h4>
+                            <p style="margin-bottom: 25px;">Alle Preise verstehen sich zuzüglich der gesetzlichen Mehrwertsteuer. Die Zahlung ist innerhalb von 14 Tagen nach Rechnungsstellung ohne Abzug fällig. Bei Zahlungsverzug werden Verzugszinsen in Höhe von 9 Prozentpunkten über dem Basiszinssatz berechnet. Wir sind berechtigt, für Mahnungen eine Pauschale von 5,00 € zu erheben.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 5 Mitwirkungspflichten des Kunden</h4>
+                            <p style="margin-bottom: 25px;">Der Kunde ist verpflichtet, alle für die Leistungserbringung erforderlichen Informationen und Unterlagen rechtzeitig zur Verfügung zu stellen. Er hat die erforderlichen technischen Voraussetzungen zu schaffen und aufrechtzuerhalten. Verzögerungen, die durch unzureichende Mitwirkung des Kunden entstehen, gehen zu dessen Lasten.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 6 Gewährleistung</h4>
+                            <p style="margin-bottom: 25px;">Für Mängel an der Leistung übernehmen wir die Gewährleistung nach den gesetzlichen Bestimmungen. Die Gewährleistungsfrist beträgt 12 Monate ab Abnahme der Leistung. Bei Software-Entwicklungsleistungen erfolgt die Gewährleistung durch Nachbesserung oder Ersatzlieferung nach unserer Wahl. Schlägt die Nacherfüllung fehl, ist der Kunde berechtigt, Minderung zu verlangen oder vom Vertrag zurückzutreten.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 7 Haftung</h4>
+                            <p style="margin-bottom: 25px;">Unsere Haftung ist auf Vorsatz und grobe Fahrlässigkeit beschränkt, außer bei Verletzung von Leben, Körper oder Gesundheit sowie bei der Verletzung wesentlicher Vertragspflichten. Die Haftung für mittelbare Schäden und entgangenen Gewinn ist ausgeschlossen. Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vorhersehbaren, typischerweise eintretenden Schaden begrenzt.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 8 Vertraulichkeit</h4>
+                            <p style="margin-bottom: 25px;">Beide Parteien verpflichten sich, alle im Rahmen der Geschäftsbeziehung bekannt gewordenen vertraulichen Informationen streng vertraulich zu behandeln und nur für die Zwecke der Vertragserfüllung zu verwenden. Diese Verpflichtung besteht auch nach Beendigung der Geschäftsbeziehung fort.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 9 Urheberrecht und Nutzungsrechte</h4>
+                            <p style="margin-bottom: 25px;">An allen von uns erstellten Werken, insbesondere Software, Dokumentationen und Konzepten, behalten wir uns die Urheberrechte vor. Dem Kunden werden die für die vereinbarte Nutzung erforderlichen Nutzungsrechte eingeräumt. Eine Weitergabe an Dritte ist nur mit unserer ausdrücklichen schriftlichen Zustimmung gestattet.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 10 Kündigung</h4>
+                            <p style="margin-bottom: 25px;">Dauerverträge können von beiden Parteien mit einer Frist von drei Monaten zum Ende eines Kalendermonats gekündigt werden. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Kündigungen bedürfen der Schriftform.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 11 Salvatorische Klausel</h4>
+                            <p style="margin-bottom: 25px;">Sollten einzelne Bestimmungen dieses Vertrages unwirksam oder undurchführbar sein oder werden, so wird dadurch die Wirksamkeit der übrigen Bestimmungen nicht berührt. Anstelle der unwirksamen oder undurchführbaren Bestimmung gilt diejenige wirksame und durchführbare Regelung als vereinbart, die der beabsichtigten Regelung wirtschaftlich am nächsten kommt.</p>
+                            
+                            <h4 style="color: #fff; margin: 30px 0 15px 0; font-size: 1.3rem; padding-bottom: 10px; border-bottom: 2px solid #00d4ff; display: inline-block;">§ 12 Schlussbestimmungen</h4>
+                            <p style="margin-bottom: 25px;">Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten aus diesem Vertragsverhältnis ist Traben-Trarbach, sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist. Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Back to Home Button -->
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 18px 35px; background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 40px rgba(0, 212, 255, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0, 212, 255, 0.3)'">
+                    <span style="font-size: 1.2rem;">←</span>
+                    Zurück zur Startseite
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function switchTab(tabName) {
+            console.log('Switching to tab:', tabName);
+            
+            // Hide all content with fade effect
+            document.getElementById('content-impressum').style.display = 'none';
+            document.getElementById('content-datenschutz').style.display = 'none';
+            document.getElementById('content-agb').style.display = 'none';
+            
+            // Reset all buttons to inactive state
+            const buttons = ['btn-impressum', 'btn-datenschutz', 'btn-agb'];
+            buttons.forEach(btnId => {
+                const btn = document.getElementById(btnId);
+                btn.style.background = 'rgba(255,255,255,0.05)';
+                btn.style.color = '#b0b0b0';
+                btn.style.fontWeight = '500';
+                btn.style.transform = 'translateY(0)';
+            });
+            
+            // Activate selected button with gradient
+            const activeBtn = document.getElementById('btn-' + tabName);
+            activeBtn.style.background = 'linear-gradient(135deg, #00d4ff 0%, #0099cc 100%)';
+            activeBtn.style.color = 'white';
+            activeBtn.style.fontWeight = '600';
+            
+            // Show selected content with fade in
+            const activeContent = document.getElementById('content-' + tabName);
+            activeContent.style.display = 'block';
+            activeContent.style.opacity = '0';
+            setTimeout(() => {
+                activeContent.style.opacity = '1';
+            }, 50);
+        }
+        
+        // Add CSS for fade animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            div[id^="content-"] {
+                transition: opacity 0.3s ease-out !important;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        console.log('Stylish tabs loaded successfully');
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><span style="color:#fff;">Daniel</span><span style="color:#00d4ff;"> Foth</span></h3>
+                    <p>Ihr Partner für professionelle IT-Lösungen und innovative Software-Entwicklung.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Software Entwicklung</a></li>
+                        <li><a href="index.html#services">IT-Support</a></li>
+                        <li><a href="index.html#services">Hardware Setup</a></li>
+                        <li><a href="index.html#tanoffice">TanOffice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="index.html#transfer">Über uns</a></li>
+                        <li><a href="index.html#transfer">Walter Schmitt Übernahme</a></li>
+                        <li><a href="index.html#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="rechtliches.html">Impressum</a></li>
+                        <li><a href="rechtliches.html">Datenschutz</a></li>
+                        <li><a href="rechtliches.html">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Daniel Foth. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

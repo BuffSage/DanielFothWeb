@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Test</title>
+    <style>
+        .tab-nav {
+            display: flex;
+            background: #1a1a1a;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 20px;
+            background: transparent;
+            border: none;
+            color: #b0b0b0;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tab-button:hover {
+            color: #ffffff;
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .tab-button.active {
+            color: #00d4ff;
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+        }
+
+        .tab-content {
+            padding: 40px;
+            background: #111;
+            color: white;
+        }
+
+        .tab-panel {
+            display: none !important;
+        }
+
+        .tab-panel.active {
+            display: block !important;
+        }
+    </style>
+</head>
+<body style="background: #000; color: white; font-family: Arial, sans-serif;">
+    <h1>Tab Functionality Test</h1>
+    
+    <div class="rechtliches-tabs">
+        <div class="tab-nav">
+            <button class="tab-button active" data-tab="impressum">Impressum</button>
+            <button class="tab-button" data-tab="datenschutz">Datenschutz</button>
+            <button class="tab-button" data-tab="agb">AGB</button>
+        </div>
+        <div class="tab-content">
+            <div id="impressum" class="tab-panel active">
+                <h3>Impressum Content</h3>
+                <p>This is the Impressum tab content.</p>
+            </div>
+            <div id="datenschutz" class="tab-panel">
+                <h3>Datenschutz Content</h3>
+                <p>This is the Datenschutz tab content.</p>
+            </div>
+            <div id="agb" class="tab-panel">
+                <h3>AGB Content</h3>
+                <p>This is the AGB tab content.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function initTabs() {
+            console.log('Initializing tabs...');
+            
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            
+            console.log('Found tab buttons:', tabButtons.length);
+            console.log('Found tab panels:', tabPanels.length);
+            
+            if (tabButtons.length === 0 || tabPanels.length === 0) {
+                console.log('No tabs found');
+                return;
+            }
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Tab clicked:', this.getAttribute('data-tab'));
+                    
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and panels
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanels.forEach(panel => panel.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Add active class to corresponding panel
+                    const targetPanel = document.getElementById(targetTab);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                        console.log('Activated panel:', targetTab);
+                    } else {
+                        console.log('Target panel not found:', targetTab);
+                    }
+                });
+            });
+            
+            console.log('Tabs initialized successfully');
+        }
+        
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', initTabs);
+        
+        // Also initialize if already loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initTabs);
+        } else {
+            initTabs();
+        }
+    </script>
+</body>
+</html>
