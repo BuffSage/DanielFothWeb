@@ -1,0 +1,38 @@
+name: Deploy to STRATO on push
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Prepare SSH (known_hosts)
+        run: |
+          mkdir -p ~/.ssh
+          # Add STRATO host key so StrictHostKeyChecking can stay on
+          ssh-keyscan -t ed25519 ${{ secrets.STRATO_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Ensure target directory exists
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+          sshpass -p "${{ secrets.STRATO_PASS }}" \
+            ssh -o StrictHostKeyChecking=yes \
+                "${{ secrets.STRATO_USER }}@${{ secrets.STRATO_HOST }}" \
+                "mkdir -p '${{ secrets.STRATO_TARGET }}'"
+
+      - name: Deploy with rsync over SSH (password auth)
+        run: |
+          sudo apt-get install -y rsync
+          sshpass -p "${{ secrets.STRATO_PASS }}" \
+            rsync -avz --delete \
+              --exclude ".git" \
+              --exclude ".github" \
+              -e "ssh -o StrictHostKeyChecking=yes" \
+              ./ "${{ secrets.STRATO_USER }}@${{ secrets.STRATO_HOST }}:${{ secrets.STRATO_TARGET }}/"
